@@ -21,6 +21,14 @@ void loop()
       aantalFreq = aantalFreq + 1;
     }
   }
+  if (digitalRead(1) == HIGH){
+      frequenties = frequenties + Freqfunc(1);
+      aantalFreq = aantalFreq + 1;
+    }
+  if (digitalRead(2) == HIGH){
+      frequenties = frequenties + Freqfunc(2);
+      aantalFreq = aantalFreq + 1;
+    }
   tone(3, frequenties/aantalFreq);
   frequenties = 0;
   aantalFreq = 0;
